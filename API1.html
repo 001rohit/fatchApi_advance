@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="root"></div>
+    <button id="getText">Click Me!</button>
+    <button id="getData">get Data!</button>
+    <div id="output"></div><br>
+    <div id="output1"></div>
+    <script>
+        // const data = fetch("https://fakestoreapiserver.reactbd.com/amazonproducts")
+        // data.then((message)=>message.json()).then((res)=>console.log(res)).catch((error)=>console.log("some technical error"))
+      const text = document.getElementById('getText');
+     const getData1 = document.getElementById('getData')
+
+       text.addEventListener('click',getText);
+       getData1.addEventListener("click",getData);
+
+        function getData(){
+            fetch('https://pokeapi.co/api/v2/pokemon/charmeleon').then((data)=>data.json()).then((data)=>{
+                console.log(data)
+            }).catch((error)=>console.log(erro))
+        }
+
+
+    //    function getText(){
+    //     fetch('user1.json').then((res)=>res.json()).then((data)=>{
+    //         let output = '<h2>Users Data</h2>';
+    //         console.log(data)
+    //         data.forEach(element => {
+    //             output+=`
+    //               <ul>
+    //                 <li>ID: ${element.id}</li>
+    //                 <li>Name: ${element.name}</li>
+    //                 <li>Email.Id: ${element.email}</li>
+    //                 </ul>
+    //             `;
+    //         });
+    //         document.getElementById('output').innerHTML=output
+    //     })
+    // }
+    // function getText(){
+    //     fetch('userData.json').then((res)=>res.json()).then((data)=>{
+    //         let output = '<h2>Users Data</h2>';
+    //         console.log(data)
+    //         data.forEach(element => {
+    //             output+=`
+    //               <ul>
+    //                 <li>ID: ${element._id}</li>
+    //                 <li>user name: ${element.username}</li>
+    //                 <li>Name: ${element.name}</li>
+    //                 <li>Email.Id: ${element.email}</li>
+    //                 </ul>
+    //             `;
+    //         });
+    //         document.getElementById('output').innerHTML=output
+    //     })
+    // }
+    // function getText(){
+    //     fetch('https://fakestoreapiserver.reactbd.com/walmart').then((res)=>res.json()).then((data)=>{
+    //         let output = '<h2>Users Data</h2>';
+    //         console.log(data)
+    //         data.forEach(element => {
+    //             output+=`
+    //               <ul>
+    //                 <li>ID: ${element._id}</li>
+    //                 <li>user name: ${element.username}</li>
+    //                 <li>Name: ${element.name}</li>
+    //                 <li>Email.Id: ${element.email}</li>
+    //                 </ul>
+    //             `;
+    //         });
+    //         document.getElementById('output').innerHTML=output
+    //     })
+    // }
+// function getData(){
+//     setInterval(() => {
+//         fetch('sample2.txt').then((message)=>message.text()).then((message)=>{
+//             document.getElementById('output1').innerHTML=message
+//         }).catch((error)=>console.log(error))
+     
+//     }, 1000);
+//    }
+
+// function getText(){
+//     fetch('sample.txt').then((res)=>res.text()).then((data)=>{document.getElementById('output').innerHTML= data}).catch((error)=>console.log("Some technical error ",error))
+// }
+   
+    
+        
+    </script>
+</body>
+</html>
